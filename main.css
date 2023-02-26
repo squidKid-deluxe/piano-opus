@@ -4,8 +4,10 @@ body {
     background-image: url("background.jpg");
     background-size: cover;
 	margin:0;
+	display:flex;
     padding: 0;
 }
+
 
 .background {
 	background: linear-gradient(90deg, #00000000 0%, #111111ee 5%, #111111ee 95%, #00000000 100%); 
@@ -19,14 +21,29 @@ body {
 }
 
 h1 {
-	font-size: 3vw;
+	font-size: max(5vh, 3vw);
 	font-family:cursive;
 }
 
 p {
-	font-size: 1vw;
+	font-size: max(1vw, 2vh);
 }
 
 table tr td {
 	padding:10px;
+}
+
+
+@media only screen and (max-width: 1500px) {
+  thead {
+    display: none;
+  }
+  td {
+    display: block;
+  }
+  td:before {
+    content: attr(data-th);
+    display: block;
+    font-weight: bold;
+  }
 }
