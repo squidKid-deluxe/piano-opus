@@ -4,7 +4,8 @@ A collection of some of my piano performances.
 
 ## MP3 Files:
 
-Recorded with Yamaha P125 and Guvcview; converted to mp3 with ffmpeg.
+Recorded with Yamaha P125 and either Guvcview or Audacity.
+When Guvcview was used, I converted to mp3 with ffmpeg.
 
 ### Metadata:
  - Stream #0:0: Audio: mp3 (libmp3lame), 44100 Hz, stereo, fltp
