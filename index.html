@@ -1,60 +1,70 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title id="pageTitle">squidKid-deluxe's Piano Opus</title>
-        <link rel="icon" type="image/png" href="favicon.png">
-        <!-- Includes: -->
-        <link rel="stylesheet" href="main.css" />
-        <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.8/plyr.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5media/1.1.8/html5media.min.js"></script>
-        <script src="main.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="background">
-                <h1>squidKid-deluxe's Piano Opus</h1>
 
-                <p>
-                    A collection of my piano performances. More videos, mp3s and midis will follow,
-                    visit
-                    <a href="https://github.com/squidKid-deluxe/piano-opus">the source github</a>
-                    for the downloadable files. <br />
-                    <br />
-                </p>
+<head>
+    <title id="pageTitle">squidKid-deluxe's Piano Opus</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Includes: -->
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.8/plyr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5media/1.1.8/html5media.min.js"></script>
+    <script src="main.js"></script>
+</head>
 
-                <p>Sunshine of Your Love:</p>
-
-                <video controls style="width: 50vw;">
-                    <source src="Sunshine of Your Love.webm" type="video/webm" />
-                    Your browser does not support the video element. Please see
-                    <a href="https://github.com/squidKid-deluxe/piano-opus">here</a> to download the
-                    files for local viewing.
-                </video>
-                <hr>
+<body>
+    <div class="container">
+        <div class="background">
+            <h1>squidKid-deluxe's Piano Opus</h1>
+            <p>
+                A collection of my piano performances recorded as 320kbps MP3. Be sure to check out
+                my rendition of "What is Love?"; it is my first published track with a custom 808
+                backing!
                 <br>
-                <div class="column add-bottom">
-                    <div id="mainwrap">
-                        <div id="nowPlay">
-                            <span id="npAction">Paused...</span><span id="npTitle"></span>
+                <br>
+                Please be cautious of volume levels, as my setup is slowly changing as I record these.
+                With any luck, however, I will soon find a way to normalize them all :). 
+                <br>
+                <br>More videos, mp3s
+                and midis will follow, visit
+                <a href="https://github.com/squidKid-deluxe/piano-opus">the source github</a>
+                for the downloadable files. <br />
+                <br />
+            </p>
+            <p>Sunshine of Your Love:</p>
+            <video controls style="width: 50vw;">
+                <source src="Sunshine of Your Love.webm" type="video/webm" />
+                Your browser does not support the video element. Please see
+                <a href="https://github.com/squidKid-deluxe/piano-opus">here</a> to download the
+                files for local viewing.
+            </video>
+            <hr>
+            <br>
+            <div class="column add-bottom">
+                <div id="mainwrap">
+                    <div id="nowPlay">
+                        <span id="npAction">Paused...</span><span id="npTitle"></span>
+                    </div>
+                    <div id="audiowrap">
+                        <div id="audio0">
+                            <audio id="audio1" preload controls>
+                                Your browser does not support HTML5 Audio! 😢 see
+                                <a href="https://github.com/squidKid-deluxe/piano-opus">here</a>
+                                to download the files for local viewing.
+                            </audio>
                         </div>
-                        <div id="audiowrap">
-                            <div id="audio0">
-                                <audio id="audio1" preload controls>
-                                    Your browser does not support HTML5 Audio! 😢
-                                </audio>
-                            </div>
-                            <div id="tracks">
-                                <a id="btnPrev">&larr;</a><a id="btnNext">&rarr;</a>
-                            </div>
+                        <div id="tracks">
+                            <a id="btnPrev">&larr;</a><a id="btnNext">&rarr;</a>
                         </div>
-                        <div id="plwrap">
-                            <ul id="plList"></ul>
-                        </div>
+                    </div>
+                    <div id="plwrap">
+                        <ul id="plList"></ul>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
