@@ -6,15 +6,12 @@ jQuery(function ($) {
         // initialize plyr
         var player = new Plyr('#audio1', {
             controls: [
-                'restart',
                 'play',
                 'progress',
-                'current-time',
                 'duration',
                 'mute',
                 'volume',
                 'download',
-                'settings'
             ]
         });
         // initialize playlist and controls

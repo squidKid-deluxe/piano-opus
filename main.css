@@ -2,232 +2,394 @@
 /*@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 */
 /* Global Styles ================================================== */
- body {
-     -webkit-font-smoothing:antialiased;
-     -webkit-text-size-adjust:100%;
-     font-size:max(0.6vw, 2vh, 10px);
-    /* font-family:"Source Sans Pro", arial, sans-serif;
-    */
-     font-weight:400;
-     letter-spacing:.025rem;
-     line-height:1.618;
-     color: white;
-     background: url("background.jpg");
-     background-size:cover;
-     background-attachment:fixed;
-     margin:0;
-     padding: 0;
+body {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    font-size: 20px;
+    letter-spacing: .025rem;
+    line-height: 1.618;
+    color: white;
+    background: url("background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
 }
- .container {
-     display: block;
-     background: linear-gradient(90deg, #11111100 0%, #111111fa 5%, #111111fa 95%, #11111100 100%);
-     width:75vw;
-     height:100%;
-     min-height:100vw;
-     margin: auto;
-     margin-top:none;
-     margin-bottom:none;
-     padding:10px;
-}
- .background {
-     width:65vw;
-     margin: auto;
-}
- h1 {
-     font-size: max(5vh, 3vw);
-     font-family:cursive;
-     text-align:center;
-}
- *,::before,::after {
-     box-sizing:border-box;
-}
- * {
-     -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
-     -webkit-tap-highlight-color:transparent;
-}
- video {
-     display: block;
-     margin: 0 auto;
-}
-/* Setup ================================================== */
- .column {
-     width:75%;
-    margin:auto 
-}
-/* Typography / Links ================================================== */
- p {
-     color:#fff;
-     display:block;
-     font-size:max(0.6vw, 2vh, 10px);
-     font-weight:400;
-     margin:0 0 2px;
-     text-align:center 
-}
- a,a:visited {
-     color:#8cc3e6;
-     outline:0;
-     text-decoration:underline;
-}
- a:hover,a:focus {
-     color:#bbdef5;
-}
- p a,p a:visited {
-     line-height:inherit;
-}
-/* Misc. ================================================== */
- .add-bottom {
-     margin-bottom:2rem !important;
-}
- .left {
-     float:left;
-}
- .right {
-     float:right;
-}
- .center {
-     text-align:center;
-}
- .hidden {
-     display:none;
-}
- .no-support {
-     margin:2rem auto;
-     text-align:center;
-     width:90%;
-}
-/* Audio Player Styles ================================================== */
- audio {
-     display:none;
-}
- #audiowrap, #plwrap {
-     margin:0 auto;
-}
- #tracks {
-     font-size:0;
-     position:relative;
-     text-align:center;
-}
- #nowPlay {
-     display:block;
-     font-size:0;
-}
- #nowPlay span {
-     display:inline-block;
-     font-size:max(0.6vw, 2vh, 10px);
-     vertical-align:top;
-}
- #nowPlay span#npAction {
-     padding:21px;
-     width:30%;
-}
- #nowPlay span#npTitle {
-     padding:21px;
-     text-align:right;
-     width:70%;
-}
-/* playlist */
- #plList li {
-     border-radius: 3px;
-     border-width:1px;
-     border-color:white;
-     border-style:solid;
-     transition:background .3s ease;
-     transition:border .3s ease;
-     cursor:pointer;
-     display:block;
-     margin:10px 0;
-     padding:21px 0;
-}
- #plList li:hover {
-     background-color:rgba(0, 0, 0, .4);
 
-     transition:border-color .3s ease;
-     transition:background .3s ease;
+#forkongithub a {
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    font-family: arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 40px;
+    font-size: 1rem;
+    line-height: 2rem;
+    position: relative;
+    transition: background-color 0.4s, transform 0.4s;
+    border-top: solid white 2px;
+    border-bottom: solid white 2px;
 }
- .plItem {
-     position:relative;
+
+#forkongithub a:hover {
+    background: #911;
+    color: #fff;
 }
- .plNum {
- 		padding-left:21px;
- 		padding-right:21px;
-     
+
+
+.container {
+    display: block;
+    background: linear-gradient(90deg, #11111100 0%, #111111fa 5%, #111111fa 95%, #11111100 100%);
+    width: 75vw;
+    height: 100%;
+    min-height: 100vw;
+    margin: auto;
+    margin-top: none;
+    margin-bottom: none;
+    padding: 10px;
 }
- .plTitle {
-     left:25px;
-     overflow:hidden;
-     position:absolute;
-     right:65px;
-     text-overflow:ellipsis;
-     top:0;
-     white-space:nowrap;
+
+.background {
+    width: 65vw;
+    margin: auto;
 }
- .plLength {
-     padding-left:21px;
-     position:absolute;
-     right:21px;
-     top:0;
+
+h1 {
+    font-size: 2rem;
+    font-family: cursive;
+    text-align: center;
 }
- .plSel, .plSel:hover {
-     background-color:rgba(0, 0, 0, .4);
-     color:#fff;
-     cursor:default !important;
-     transition:background .3s ease;
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
 }
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+video {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Setup ================================================== */
+.column {
+    width: 75%;
+    margin: auto
+}
+
+/* Typography / Links ================================================== */
+p {
+    color: #fff;
+    display: block;
+/*    font-size: max(0.6vw, 2vh, 10px);*/
+    transition: font-size 0.3s ease;
+    font-weight: 400;
+    margin: 0 0 2px;
+    text-align: center
+}
+
+a,
+a:visited {
+    color: #8cc3e6;
+    outline: 0;
+    text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+    color: #bbdef5;
+}
+
+p a,
+p a:visited {
+    line-height: inherit;
+}
+
+/* Misc. ================================================== */
+.add-bottom {
+    margin-bottom: 2rem !important;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.no-support {
+    margin: 2rem auto;
+    text-align: center;
+    width: 90%;
+}
+
+/* Audio Player Styles ================================================== */
+audio {
+    display: none;
+}
+
+#audiowrap,
+#plwrap {
+    margin: 0 auto;
+}
+
+#tracks {
+    font-size: 0;
+    position: relative;
+    text-align: center;
+}
+
+#nowPlay {
+    display: block;
+    font-size: 0;
+}
+
+#nowPlay span {
+    display: inline-block;
+    font-size: 1rem;
+    vertical-align: top;
+}
+
+#nowPlay span#npAction {
+    padding: 21px;
+    width: 30%;
+}
+
+#nowPlay span#npTitle {
+    padding: 21px;
+    text-align: right;
+    width: 70%;
+}
+
+#plList li {
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+    position: relative;
+    transition: background .3s ease;
+    transition: border .3s ease;
+    transition: padding .3s ease;
+    cursor: pointer;
+    display: block;
+    left:-40px;
+    width:49vw;
+}
+
+
+#plList li:hover {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+}
+
+.plItem {
+    position: relative;
+    padding:0px;
+}
+
+.plNum {
+    padding-left: 21px;
+    padding-right: 21px;
+    padding: 1px;
+
+}
+
+.plTitle {
+    left: 10px;
+    overflow: hidden;
+    position: absolute;
+    right: 65px;
+    text-overflow: ellipsis;
+    top: 0;
+    white-space: nowrap;
+}
+
+.plLength {
+    /*     padding-left:21px;*/
+    position: absolute;
+    right: 21px;
+    top: 0;
+}
+
+.plSel,
+.plSel:hover {
+    background-color: rgba(0, 0, 0, .4);
+    color: #fff;
+    cursor: default !important;
+    transition: background .3s ease;
+}
+
 /* next / prev buttons */
- #tracks a {
-     border-radius:3px;
-     color:#fff;
-     cursor:pointer;
-     display:inline-block;
-     font-size:max(0.6vw, 2vh, 10px);
-     height:40px;
-     line-height:.2;
-     margin:0 5px 30px;
-     padding:12px;
-     text-decoration:none;
-     transition:background .3s ease;
+#tracks a {
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    height: 30px;
+    line-height: .2;
+    margin: 0 5px;
+    padding: 12px;
+    text-decoration: none;
+    transition: background .3s ease;
 }
- #tracks a:hover, #tracks a:active {
-     background-color:rgba(0, 0, 0, .4);
-     color:#fff;
+
+#tracks a:hover,
+#tracks a:active {
+    background-color: rgba(0, 0, 0, .4);
+    color: #fff;
 }
- #tracks a::-moz-focus-inner {
-     border:0;
-     padding:0;
+
+#tracks a::-moz-focus-inner {
+    border: 0;
+    padding: 0;
 }
+
 /* Plyr Overrides ================================================== */
- .plyr--audio .plyr__controls {
-     --plyr-audio-controls-background : black background-color:transparent;
-     border:none;
-     color:#fff;
-     font-family:"Source Sans Pro", arial, sans-serif;
-     padding:20px 20px 20px 13px;
-     width:100%;
+.plyr--audio .plyr__controls {
+    --plyr-audio-controls-background: #00000033;
+    border: 1px solid white;
+    color: #fff;
+    font-family: "Source Sans Pro", arial, sans-serif;
+/*    width: 100%;*/
+    width:49vw;
+    --plyr-control-radius:10px;
 }
- a.plyr__controls__item.plyr__control:hover, .plyr--audio .plyr__controls button:hover, .plyr--audio .plyr__controls button.tab-focus:focus, .plyr__play-large {
-     background-color:rgba(0, 0, 0, .1);
+
+
+a.plyr__controls__item.plyr__control:hover,
+.plyr--audio .plyr__controls button:hover,
+.plyr--audio .plyr__controls button.tab-focus:focus,
+.plyr__play-large,
+.plyr--audio .plyr__progress--buffer,
+.plyr--audio .plyr__volume--display {
+    background-color: rgba(0, 0, 0, 0.7);
 }
- .plyr__progress--played, .plyr__volume--display {
-     color:rgba(0, 0, 0, .1);
+
+.plyr__progress--played,
+.plyr__volume--display,
+.plyr--audio .plyr__progress--buffer {
+    color: rgba(0, 0, 0, 0.7);
 }
- .plyr--audio .plyr__progress--buffer, .plyr--audio .plyr__volume--display {
-     background-color:rgba(0, 0, 0, .1);
+
+.plyr__controls .plyr__controls__item.plyr__time {
+    font-size: 14px;
+    margin-left: 7px;
 }
- .plyr--audio .plyr__progress--buffer {
-     color:rgba(0, 0, 0, .1);
-}
- .plyr__controls .plyr__controls__item.plyr__time {
-     font-size:14px;
-     margin-left:7px;
-}
+
 /* Media Queries ================================================== */
- @media only screen and (max-width:600px) {
-     #nowPlay span#npAction {
-         display:none;
+/* Small-medium devices (phones and tablets, 900px and down) */
+@media only screen and (max-width: 900px) {
+    #nowPlay span {
+        display: inline-block;
+        font-size: 0.9rem;
+        vertical-align: top;
     }
-     #nowPlay span#npTitle {
-         display:block;
-         text-align:center;
-         width:100%;
+
+    #logo {
+        margin: auto;
+        display: block;
+        top: 10px;
+        position: relative;
     }
+
+    body {
+        font-size:0.9rem;
+    }
+
+    #forkongithub a {
+        display: block;
+        margin: auto;
+        border-top: solid white 2px;
+        border-bottom: solid white 2px;
+    }
+
+    /* playlist */
+    #plList li {
+        margin: 10px 0;
+        padding: 10px 0;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 900px) {
+    #logo {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    body {
+        font-size:1rem;
+    }
+
+    #forkongithub {
+        position: fixed;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 300px;
+        overflow: hidden;
+        height: 300px;
+        z-index: 9999;
+    }
+
+    #forkongithub a {
+        width: 300px;
+        position: absolute;
+        top: 65px;
+        right: -65px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    /* playlist */
+    #plList li {
+        margin: 10px 0;
+        padding: 15px 0;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #logo {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+/*        width: 300px;*/
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    /* playlist */
+    #plList li {
+        margin: 10px 0;
+        padding: 20px 0;
+    }
+
 }
